@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>20220816</title>
+    </head>
+        <body>
+            <script lang="javascript">
+            var alt, bas, arest, diag, trialt, tribas, n1, n2, n3, n4, a1, a2, km, celsius,V1,V2, v1, v2, p1, p2, media, altura, peso, imc, l1,l2,l3, la, lb, lc, val1, val1, cont, tabu;
+            document.write("<h1>Exercício 01: </h1>");
+            confirm("A seguir insira a altura e base do retângulo para calcular sua área.")
+           alt = parseFloat(window.prompt("Insira a altura do retângulo (em cm)"));
+           bas = parseFloat(window.prompt("Insira a base do retângulo: (em cm)"));
+            document.write("A área do retângulo é: " + (bas*alt) + "cm²" + "<br>");
+
+            document.write("<h1>Exercício 02: </h1>");
+            confirm("A seguir insira o valor da aresta de um quadrado qualquer para calcular sua área.")
+           arest = parseInt(window.prompt("Insira o valor da uma aresta de um quadrado qualquer para calcular sua área:(em cm)")); 
+            document.write("A área do quadrado é: "+ Math.pow(arest,2) + "cm²" + "<br>");
+
+            document.write("<h1>Exercício 03: </h1>");
+            confirm("A seguir insira o valor da diagonal de um quadrado qualquer para calcular sua área.")
+           diag = parseFloat(window.prompt("Insira o valor de uma diagonal de um quadrado qualquer para calcular sua área: (em cm)")); 
+            document.write("A área do quadrado é: "+ Math.pow(diag,2) + "cm²" + "<br>");
+
+            document.write("<h1>Exercício 04: </h1>");
+            confirm("A seguir insira a altura e base do triângulo para calcular sua área.")
+           trialt = parseFloat(window.prompt("Insira a altura do triângulo(em cm)"));
+           tribas = parseFloat(window.prompt("Insira a base do triângulo(em cm): "));
+            document.write("A área do triângulo é: " + ((tribas*trialt)/2) + "cm²" + "<br>");
+
+            document.write("<h1>Exercício 05: </h1>");
+            confirm("A seguir insira quatro valores quaisquer para calcular sua média aritimética.")
+           n1 = parseFloat(window.prompt("Insira o primeiro número qualquer: "));
+           n2 = parseFloat(window.prompt("Insira o segundo número: "));
+           n3 = parseFloat(window.prompt("Insira o terceiro número: "));
+           n4 = parseFloat(window.prompt("Insira o quarto número: "));
+            document.write("A média aritimética entre os valores informados é: " + ((n1+n2+n3+n4)/4) + "<br>");
+            
+            document.write("<h1>Exercício 06: </h1>");
+            confirm("A seguir insira dois valores quaisquer para calcular sua média geométrica.")
+           a1 = parseFloat(window.prompt("Insira o primeiro número qualquer: "));
+           a2 = parseFloat(window.prompt("Insira o segundo número: "));
+            document.write("A média geométrica entre os valores informados é: " + (Math.sqrt(a1*a2)));
+            
+            document.writeln("<h1>Exercício 08: </h1>");
+            confirm("A seguir insira uma temperatura em graus Celsius para descobrir seu valor em Fahrenheit.")
+           celsius = parseFloat(window.prompt("Insira a temperatura em graus Celsius para converter a Fahrenheit: ")); 
+            document.write(celsius + "º Celsius equivalem a: " + (celsius*1.8+32) + "º Fahrenheit" + "<br>");
+
+            document.writeln("<h1>Exercício 09: </h1>");
+            confirm("A seguir insira dois valores diferentes para descobrir o maior.")
+           V1 = parseFloat(window.prompt("Insira o primeiro valor qualquer: "));
+           V2 = parseFloat(window.prompt("Insira o segundo valor qualquer: "));
+            if(V1>V2)
+            {
+            document.writeln("O valor de " + V1 + " é maior que o valor de " + V2)
+            }
+            else if(V1<V2)
+            {
+            document.writeln("O valor de " + V2 + " é maior que o valor de " + V1)
+            }
+            else
+            {
+            confirm("ERRO!");
+            }
+
+            document.write("<h1>Exercício 10: </h1>");
+            confirm("A seguir insira dois valores quaisquer para descobrir o maior ou igual.")
+           v1 = parseFloat(window.prompt("Insira o primeiro valor qualquer: "));
+           v2 = parseFloat(window.prompt("Insira o segundo valor qualquer: "));
+            if(v1>v2)
+           {
+             document.write("O valor de " + v1 + " é maior que o valor de " + v2)
+           }
+            else if(v1==v2)
+            {
+            document.write("Os valores são iguais")
+            }
+            else if(v2==v1)
+            {
+            document.write("Os valores são iguais")
+            }
+            else
+            {
+            document.writeln("O valor de " + v2 + " é maior que o valor de " + v1);
+            }
+
+            document.write("<h1>Exercício 11: </h1>");
+            confirm("A seguir insira duas notas para calcular sua média escolar.")
+           p1 = parseFloat(window.prompt("Insira a primeira nota: "));
+           p2 = parseFloat(window.prompt("Insira a segunda nota: "));
+           media = ((p1+(2*p2))/3)
+            document.writeln("A sua média escolar é: " + media + "<br>");
+           if (media>=6)
+           {
+            document.writeln("Situação: Aprovado!");
+           }
+           else
+           {
+            document.writeln("Situação: Reprovado!");
+           }
+
+            document.write("<h1>Exercício 12: </h1>");
+            confirm("A seguir insira sua altura e peso para avaliar seu imc.")
+          altura = parseFloat(window.prompt("Insira sua altura: "));
+          peso = parseFloat(window.prompt("Insira seu peso: "));
+          imc = (peso/altura)*(peso/altura)
+
+          if (imc < 20)
+          {
+            document.writeln("Abaixo do peso ideal.")
+          }
+          else if(25 > imc > 20)
+          {
+            document.writeln("Peso Ideal.")
+          }
+          else
+          {
+          document.writeln("Acima do peso.")
+          }
+
+          document.write("<h1>Exercício 13: </h1>");
+          confirm("A seguir insira 3 valores para descobrir se eles formam, ou não, um triângulo e classificar seu tipo.")
+        l1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        l2 = parseInt(window.prompt("Digite um valor qualquer: "));
+        l3 = parseInt(window.prompt("Digite um valor qualquer: "));
+        if ((l1 + l2 > l3) && (l2 + l3 > l1) && (l1 + l3 > l2))
+        {
+            if (l1 != l2 != l3)
+            {
+                document.writeln("Os valores formam um triângulo escaleno. <br>");
+            }
+            else if (l1 = l2 = l3)
+            {
+                document.writeln("Os valores formam um triângulo isósceles. <br>");
+            }
+            else
+            {
+                document.writeln("Os valores formam um triângulo equilátero. <br>");
+            }
+        }
+        else
+        {
+            document.writeln("Os valores não formam um triângulo. <br>");
+        }
+
+          document.write("<h1>Exercício 14: </h1>");
+          confirm("A seguir insira 3 valores quaisquer para descobrir se eles formam, ou não, um triângulo retângulo.")
+        la = window.prompt("Digite um valor qualquer: ");
+        lb = window.prompt("Digite um valor qualquer: ");
+        lc = window.prompt("Digite um valor qualquer: ");
+        if((la > lb) && (la > lc))
+        {
+            if ((la*la) == (lb*lb)+(lc*lc))
+            {
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            }
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
+        }
+        else if ((lb > la) && (lb > lc))
+        {
+            if ((lb*lb) == (la*la)+(lc*lc))
+            {
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            }
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
+        }
+        else if ((lc > la) && (lc > lb))
+        {
+            if ((lc*lc) == (la*la)+(lb*lb))
+            {
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            } 
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
+        }
+        else
+        {
+            document.write("Os valores não formam um triângulo retângulo. <br>");
+        }
+
+        document.write("<h1>Exercício 15: </h1>");
+        confirm("A seguir insira 2 valores sendo o 1º valor menor que o 2º valor.")
+      val1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        do
+        {
+      val2 = parseInt(window.prompt("Digite um valor qualquer maior que o anterior: "));
+        } while (val2 <= val1)
+
+        document.write(val2 + " é maior que " + val1 + "<br> <br>");
+
+        document.write("<h1>Exercício 16: </h1>");
+        function tabuada(...args) 
+        {
+            for (const number of args) 
+            {
+                construirTabuada(number);
+            }
+        }
+
+        function construirTabuada(numero) 
+        {
+            let color_td; 
+
+            document.write("<table border='1px' style='margin: 10px'>");
+            color_td = "#ccc";
+            document.write(`<thead>Tabuada do número: ${numero}</thead>`);  
+            document.write("<td style='width:30px;background-color: " + color_td + "'>Multiplicando</td>");
+
+            for (let i = 1; i <= 10; i++) 
+            {
+                document.write("<td style='width:30px;background-color: " + color_td + "'>" + i + "</td>");
+            }
+            document.write("<tr style='height:30px;'>");
+            color_td = "#fff";
+            document.write("<td style='width:30px;background-color: " + color_td + "'>Resultado</td>");
+
+            for (let j = 1; j <= 10; j++) 
+            {
+                document.write("<td style='width:30px;background-color:" + color_td + "'>" + j * numero + "</td>");
+            }
+            document.write("</tr>");
+            document.write("</table>"); 
+        }
+
+        tabuada(5);
+      
+        document.write("<h1>Exercício 17: </h1>");
+        confirm("A seguir insira um valor qualquer para exibir sua tabuada.")
+        do
+        {
+        tab = window.prompt("Digite um valor positivo qualquer para exibição da sua respectiva tabuada.");
+        }while(tabu <= 0)
+        tabuada(tabu);
+
+        document.write("<h1>Exercício 19: </h1>");
+        var contador = 1;
+        var somador = 0;
+        do
+        {
+            somador = contador + somador;
+            contador++
+        }while(contador <= 100)
+        document.write("A soma de todos os números inteiros positivos de 1 a 100 resulta em: " + somador + "<br><br>");
+
+        document.write("<h1>Exercício 20: </h1>");
+        var nmr1 = 0;
+        var nmr2 = 1; 
+        var k;
+        document.write("Os trinta primeiros números da sequência fibonacci são: 1 ");
+        for (var p = 0; p < 29; p++)
+        {
+            k = nmr1;
+            nmr1 = nmr2;
+            nmr2 = k + nmr1;
+
+            document.write(nmr2 + "  ");
+        }
+      
+
+            </script>
+        </body>     
+</html>
